@@ -1,0 +1,27 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace "com.opaxvm"
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.opaxvm"
+        minSdk 26
+        targetSdk 34
+        versionName "2.2"
+        versionCode 1
+    }
+
+    buildFeatures { compose true }
+
+    kotlinOptions { jvmTarget = "17" }
+}
+
+dependencies {
+    implementation platform("androidx.compose:compose-bom:2024.02.00")
+    implementation "androidx.compose.material3:material3"
+    implementation "androidx.activity:activity-compose:1.8.2"
+}
